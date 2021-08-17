@@ -1,0 +1,1 @@
+Hyper-parameters and results for all models. lin with $e_0$ $e_\tau$ $k$ is the linearly decreasing learning rate schedule $r=(1-\frac{k}{\tau})e_0+\frac{k}{\tau}e_\tau$ if $k<\tau$ and $e_\tau$ otherwise.

@@ -1,0 +1,19 @@
+\begin{table}[htbp]
+    \centering
+    \begin{tabular}{@{}lp{3cm}p{3cm}ll@{}}
+         \hline Variable & Description & Definition & Time span & Source   \\\hline
+         VP & Value premium & 1/2 (small value + big value)- 1/2 (small growth + big growth) & 07-1926 - 01-2021& French \\
+         M & Excess market return & $R_m-R_f$ & 07-1926 - 01-2021 & French\\
+         DEF & Default premium & $BAA - AAA$ & 01-1919 -  12-2019& Welch and Goyal\\
+         TERM & Term premium & $lty-tbl$ & 01-1920 - 12-2019 & Welch and Goyal\\
+         RREL & Stochastically detrended risk free rate & $R_f-\frac{1}{12}\sum^{12}_{i=1}R_{f,t-i}$ & 01-1872 - 12-2019  & Welch and Goyal\\
+         DP & Dividend-price ratio & $D12/Index$ & 01-1871 - 12-2019 & Welch and Goyal\\
+         PE & Price-earnings ratio & $Index$ $/\sum^{10}_{i=1}E12_{t-12\times i}$ & 11-1880 - 12-2019 & Welch and Goyal \\
+         VOL & Realised volatility & $svar$ & 01-1855 - 12-2019& Welch and Goyal \\
+         UE & Change in unemployment rate & $\log UNRATE_t $ $/ UNRATE_{t-12}$ & 01-1949 - 02-2021  & FRED \\
+         INF & Inflation rate & $\log CPI_t $ $/ CPI_{t-12}$ & 01-1948 - 02-2021  & FRED\\
+         IP & Industrial production & $\log INDPRO_t$ $/ INDPRO_{t-12}$ & 01-1920 - 02-2021& FRED \\\hline
+    \end{tabular}
+    \caption{Variables, definitions and sources.}
+    \label{tab:data}
+\end{table}

@@ -1,0 +1,22 @@
+\begin{table}
+\centering
+\caption{Specifications and results for the 10 estimates with the lowest average validation loss. Layer 1 to 5 refers to the number of nodes in each layer. Lin($e_0$, $e_\tau$, $\tau$) is the linearly decreasing learning rate schedule $r=(1-\frac{k}{\tau})e_0+\frac{k}{\tau}e_\tau$ if $k<\tau$ and $e_\tau$ otherwise. Mom. and $\rho$ give the momentum and gradient accumulation paramter for RMSProp respectively. Updates is the number of updates required before the minimal average validation loss is attained and Val. loss is the corresponding average validation loss. The OLS benchmark is given as a reference level.}
+\label{tab:Best_results}
+\begin{tabular}{lrrrrrlrrrr}
+\toprule
+Estimate & Layer 1 & 2 & 3 & 4 & 5 &         Learning rate & Mom. & $\rho$ & Updates & Val. loss \\
+\midrule
+      23 &       9 & 9 & 9 & 9 & 9 & Lin(0.001,0.0001,250) &  0.5 &        &    9958 &    2.3339 \\
+      77 &       9 & 9 & 9 & 9 & 9 &   Lin(0.01,0.001,250) &  0.5 &        &    8638 &    2.3596 \\
+      37 &       9 & 9 &   &   &   & Lin(0.001,0.0001,250) &  0.5 &        &   60016 &    2.3736 \\
+      55 &       9 & 9 & 9 & 9 & 9 &                  0.01 &  0.5 &    0.5 &      21 &    2.3806 \\
+     132 &       9 & 9 & 9 &   &   &                  0.01 &  0.5 &    0.5 &      31 &     2.389 \\
+      83 &       9 & 9 & 9 & 9 & 9 &                  0.01 &  0.5 &    0.5 &       7 &    2.3932 \\
+      20 &       9 & 9 & 9 &   &   &                  0.01 &  0.5 &    0.5 &      44 &    2.3997 \\
+      15 &       9 & 9 & 9 &   &   &  Lin(0.01,0.001,1000) &  0.5 &        &   97931 &    2.4025 \\
+      46 &       9 & 9 & 9 &   &   &                0.0001 &  0.5 &    0.5 &     501 &    2.4088 \\
+      31 &       9 &   &   &   &   & Lin(0.001,0.0001,100) &  0.5 &        &   64805 &    2.4091 \\
+     OLS &         &   &   &   &   &                       &      &        &         &    2.9406 \\
+\bottomrule
+\end{tabular}
+\end{table}

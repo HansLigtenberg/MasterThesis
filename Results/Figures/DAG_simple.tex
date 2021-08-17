@@ -1,0 +1,20 @@
+\begin{tikzpicture}
+    [input/.style={circle,draw=blue!50,fill=blue!20,thick, inner sep=0pt,minimum size=10mm},
+    hidden/.style={circle,draw=black!50,fill=black!20,thick, inner sep=0pt,minimum size=10mm},
+    output/.style={circle,draw=red!50,fill=red!20,thick, inner sep=0pt,minimum size=10mm},
+    dots/.style={inner sep=0pt,minimum size=10mm},
+    arrow/.style={<-,shorten <=1pt,>={Stealth[round]},semithick},
+    node distance=1.8 cm]
+    
+    \node[input] (input) [label=below:$\B x$, label={[yshift=4.5mm] above:{Input}}] {};
+    \node[hidden] (hidden-1) [right=of input, label={below:{$\B h_1=\phi(A_{1}\B h_{0}+\B b_1)$}}] {}
+        edge [arrow] (input);
+    \node[dots] (dots) [right=7 mm of hidden-1] {$\dots$}
+        edge [arrow] (hidden-1);
+    \node[hidden] (hidden-L) [right=7 mm of dots, label={below:{$\B h_L=\phi(A_{L}\B h_{L-1}+\B b_L)$}}] {}
+        edge [arrow] (dots);
+    \node[output] (output) [right=of hidden-L, label={[align=right, xshift=10mm]below:{$\B y=A_{L+1}\B h_L+\B b_{L+1}$}}, label={[yshift=4.5mm] above:{Output}}] {}
+        edge [arrow] (hidden-L);
+
+    \draw [decorate, decoration={brace}] ([yshift=8mm]hidden-1.west) -- ([yshift=8mm]hidden-L.east) node [midway, above=2mm] {Hidden layers} ;
+\end{tikzpicture}

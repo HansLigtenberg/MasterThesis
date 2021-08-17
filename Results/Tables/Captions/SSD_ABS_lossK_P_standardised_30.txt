@@ -1,0 +1,1 @@
+Relative SSD seperately for $\alpha$, $\beta$ and $s$ of the 30 models with lowest training loss, where the values for each model are scaled to lie in the interval $-1$ and $1$.

@@ -1,0 +1,17 @@
+\begin{table}
+\centering
+\caption{Validation loss for the ensembles after retraining. Add refers to the method of iteratively adding models to select the models to combine. Best 50 refers to the 50 models with the lowest validation loss.}
+\label{tab:Results_combined_retrained}
+\begin{tabular}{lllr}
+\toprule
+Selection &  Combination & Selected estimates &  Validation loss \\
+\midrule
+      Add &         Mean &       [76, 25, 27] &           2.2136 \\
+      Add &       Median &           [76, 25] &           2.2193 \\
+      Add &     Accuracy &       [76, 25, 27] &           2.2135 \\
+      Add & Inverse loss &       [76, 25, 27] &           2.2135 \\
+  Best 50 &       Median &            Best 50 &           2.3191 \\
+      OLS &              &                    &           2.9406 \\
+\bottomrule
+\end{tabular}
+\end{table}

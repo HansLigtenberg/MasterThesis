@@ -1,0 +1,22 @@
+\begin{table}
+\centering
+\caption{Specifications and results for the 10 estimates with the lowest average validation loss after retraining. Layer 1 to 5 refers to the number of nodes in each layer. Mom. and $\rho$ give the momentum and gradient accumulation paramter for RMSProp respectively. Updates is the number of updates required before the minimal average validation loss is attained and Val. loss is the corresponding average validation loss. The OLS benchmark is given as a reference level.}
+\label{tab:Best_results_retrained}
+\begin{tabular}{lrrrrrlrrrr}
+\toprule
+Model & Layer 1 & 2 & 3 & 4 & 5 & Learning rate & Mom. & $\rho$ & Updates & Ret. val. loss \\
+\midrule
+   76 &       9 & 9 & 9 &   &   &          0.01 &  0.5 &    0.5 &     117 &         2.2371 \\
+   25 &       9 & 9 & 9 & 9 & 9 &        0.0001 &  0.5 &    0.5 &    3051 &          2.262 \\
+   27 &       9 & 9 & 9 & 9 & 9 &          0.01 &  0.5 &    0.5 &      57 &         2.2627 \\
+   90 &       9 &   &   &   &   &          0.01 &  0.5 &    0.5 &     102 &         2.2673 \\
+  124 &       9 & 9 &   &   &   &         0.001 &  0.5 &    0.5 &     314 &         2.2852 \\
+  110 &       9 & 9 & 9 & 9 & 9 &         0.001 &  0.5 &    0.5 &     199 &         2.2895 \\
+  130 &       9 & 9 & 9 &   &   &        0.0001 &  0.5 &    0.5 &    1863 &         2.2985 \\
+    6 &       9 &   &   &   &   &          0.01 &  0.5 &    0.5 &      97 &         2.3013 \\
+  125 &       9 & 9 &   &   &   &          0.01 &  0.5 &    0.5 &      76 &         2.3014 \\
+  132 &       9 & 9 & 9 &   &   &          0.01 &  0.5 &    0.5 &      31 &         2.3154 \\
+  OLS &         &   &   &   &   &               &      &        &         &         2.9406 \\
+\bottomrule
+\end{tabular}
+\end{table}
